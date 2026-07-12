@@ -15,7 +15,7 @@
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
     Arial, sans-serif;
 
-  --measure: 39rem; // ширина колонки чтения
+  --measure: 60rem; // ширина колонки чтения (~960px)
   --pad: 1.5rem;
 }
 
@@ -296,6 +296,16 @@ a {
     &:hover {
       color: var(--link);
     }
+  }
+}
+
+// ── Десктоп: крупнее шрифт под широкую колонку ─────────────────
+@media (min-width: 900px) {
+  body {
+    font-size: 1.25rem; // ~20px, чтобы строка при 960px не была «простынёй»
+  }
+  .article__title {
+    font-size: 2.4rem;
   }
 }
 
