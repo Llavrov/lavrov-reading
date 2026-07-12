@@ -30,10 +30,6 @@ export default function Home() {
           ))}
         </ul>
       )}
-
-      <p className="home__lead" style={{ marginTop: "3rem" }}>
-        {site.description}
-      </p>
     </main>
   );
 }
