@@ -479,6 +479,45 @@ a {
   }
 }
 
+.panel__share-row {
+  margin-bottom: 1.4rem;
+}
+.share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--link);
+    background: none;
+    border: 1px solid var(--link);
+    border-radius: 8px;
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+    &:hover {
+      background: var(--link);
+      color: #fff;
+    }
+    &:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+  }
+  &__url {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    word-break: break-all;
+  }
+}
+
 .stars {
   display: inline-flex;
   gap: 0.25rem;

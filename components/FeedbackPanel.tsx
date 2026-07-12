@@ -2,6 +2,7 @@
 
 import { useCallback, useRef, useState } from "react";
 import { Star, BookOpenCheck, Check, Loader2, Lock, Database } from "lucide-react";
+import { ShareButton } from "./ShareButton";
 
 export type PanelState = {
   rating: number | null;
@@ -102,6 +103,10 @@ export function FeedbackPanel({
             : "первое чтение"}
         </div>
       </header>
+
+      <div className="panel__share-row">
+        <ShareButton slug={slug} />
+      </div>
 
       {!dbReady && (
         <div className="panel__banner">
