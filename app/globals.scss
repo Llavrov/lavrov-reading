@@ -1,0 +1,313 @@
+// ── Дизайн-токены ──────────────────────────────────────────────
+:root {
+  --bg: #fdfdfb;
+  --bg-soft: #f4f2ec;
+  --text: #1b1b1a;
+  --text-muted: #6b6b66;
+  --border: #e3e0d8;
+  --link: #8a4b2f; // тёплый терракотовый акцент
+  --link-hover: #b3623c;
+  --excerpt-bg: #f6f4ee;
+  --excerpt-border: #d8b48a;
+
+  --serif: "Iowan Old Style", "Palatino Linotype", "Georgia", "Times New Roman",
+    serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Arial, sans-serif;
+
+  --measure: 39rem; // ширина колонки чтения
+  --pad: 1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17171a;
+    --bg-soft: #1f1f23;
+    --text: #e7e6e1;
+    --text-muted: #97968f;
+    --border: #2e2e33;
+    --link: #e0a074;
+    --link-hover: #f0b98e;
+    --excerpt-bg: #1e1e22;
+    --excerpt-border: #6b5333;
+  }
+}
+
+// ── База ───────────────────────────────────────────────────────
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.1875rem; // ~19px
+  line-height: 1.72;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern", "liga", "onum";
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.15em;
+  transition: color 0.15s ease;
+  &:hover {
+    color: var(--link-hover);
+  }
+}
+
+// ── Прогресс чтения ────────────────────────────────────────────
+.reading-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: transparent;
+  z-index: 50;
+  &__bar {
+    height: 100%;
+    background: var(--link);
+    transition: width 0.1s linear;
+  }
+}
+
+// ── Шапка ──────────────────────────────────────────────────────
+.site-header {
+  padding: 2rem 0 0;
+  &__brand {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--text);
+    text-decoration: none;
+    &:hover {
+      color: var(--link);
+    }
+  }
+}
+
+// ── Главная: список статей ─────────────────────────────────────
+.home {
+  padding: 1.5rem 0 4rem;
+  &__lead {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin: 0.5rem 0 2.5rem;
+  }
+}
+
+.article-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &__item {
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--border);
+    &:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    &:hover .article-list__title {
+      color: var(--link);
+    }
+  }
+  &__title {
+    font-size: 1.4rem;
+    line-height: 1.25;
+    margin: 0 0 0.35rem;
+    transition: color 0.15s ease;
+  }
+  &__desc {
+    color: var(--text-muted);
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+  }
+  &__meta {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+}
+
+// ── Статья ─────────────────────────────────────────────────────
+.article {
+  padding: 1rem 0 5rem;
+  &__back {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    display: inline-block;
+    margin: 0.5rem 0 2rem;
+    text-decoration: none;
+  }
+  &__title {
+    font-size: 2rem;
+    line-height: 1.15;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+  &__meta {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0 0 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+}
+
+// Типографика тела статьи
+.prose {
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin: 2.75rem 0 0.75rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+    margin: 2rem 0 0.5rem;
+  }
+  p {
+    margin: 0 0 1.35rem;
+  }
+  ul,
+  ol {
+    margin: 0 0 1.35rem;
+    padding-left: 1.4rem;
+  }
+  li {
+    margin: 0 0 0.5rem;
+  }
+  strong {
+    font-weight: 700;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+  blockquote {
+    margin: 1.5rem 0;
+    padding: 0.2rem 0 0.2rem 1.2rem;
+    border-left: 3px solid var(--border);
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.9em;
+    background: var(--bg-soft);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+}
+
+// ── Вырезка из источника ───────────────────────────────────────
+.excerpt {
+  margin: 1.75rem 0;
+  padding: 1.1rem 1.25rem;
+  background: var(--excerpt-bg);
+  border-left: 4px solid var(--excerpt-border);
+  border-radius: 0 6px 6px 0;
+  &__label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+  &__body {
+    font-size: 1.02rem;
+    p {
+      margin: 0 0 0.6rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__source {
+    display: block;
+    margin-top: 0.6rem;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-style: normal;
+    color: var(--text-muted);
+  }
+}
+
+// ── Источники под статьёй ──────────────────────────────────────
+.sources {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  &__title {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 0.75rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+// ── Подвал ─────────────────────────────────────────────────────
+.site-footer {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 2.5rem 0 3rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  a {
+    color: var(--text-muted);
+    &:hover {
+      color: var(--link);
+    }
+  }
+}
+
+// ── Мобилка ────────────────────────────────────────────────────
+@media (max-width: 480px) {
+  body {
+    font-size: 1.125rem;
+  }
+  .article__title {
+    font-size: 1.6rem;
+  }
+  .article-list__title {
+    font-size: 1.25rem;
+  }
+}

@@ -1,66 +1,39 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import { getAllArticles, formatDate } from "@/lib/articles";
+import { site } from "@/lib/site";
 
 export default function Home() {
+  const articles = getAllArticles();
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="wrap home">
+      <p className="home__lead">
+        Конспекты книг и статей своими словами: главное, что стоит запомнить, с
+        вырезками из первоисточников и ссылками. Читаю, разбираю, возвращаюсь.
+      </p>
+
+      {articles.length === 0 ? (
+        <p>Скоро здесь появятся первые разборы.</p>
+      ) : (
+        <ul className="article-list">
+          {articles.map((a) => (
+            <li key={a.slug} className="article-list__item">
+              <Link href={`/${a.slug}`} className="article-list__link">
+                <h2 className="article-list__title">{a.title}</h2>
+                <p className="article-list__desc">{a.description}</p>
+                <span className="article-list__meta">
+                  {formatDate(a.date)} · {a.readingMinutes} мин чтения
+                  {a.tags.length ? ` · ${a.tags.join(", ")}` : ""}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <p className="home__lead" style={{ marginTop: "3rem" }}>
+        {site.description}
+      </p>
+    </main>
   );
 }
