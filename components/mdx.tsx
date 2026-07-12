@@ -1,5 +1,6 @@
 import type { AnchorHTMLAttributes } from "react";
 import { Excerpt } from "./Excerpt";
+import { Figure } from "./Figure";
 
 /** Ссылки: внешние открываем в новой вкладке, внутренние — как есть. */
 function MdxLink({ href = "", ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) {
@@ -13,4 +14,5 @@ function MdxLink({ href = "", ...props }: AnchorHTMLAttributes<HTMLAnchorElement
 export const mdxComponents = {
   a: MdxLink,
   Excerpt,
+  Figure,
 };

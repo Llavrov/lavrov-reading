@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" role="img" aria-label="Как кофеин блокирует аденозиновые рецепторы">
+  <style>
+    .bg{fill:#f6f4ee}
+    .panel{fill:#efe9df}
+    .memb{fill:#d9cbb6}
+    .ink{fill:none;stroke:#2a2622;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}
+    .fi{fill:#2a2622}
+    .acc{fill:#b06a43}
+    .accs{fill:none;stroke:#b06a43;stroke-width:2.2}
+    .ttl{fill:#2a2622;font-family:Georgia,serif;font-size:18px;text-anchor:middle}
+    .sub{fill:#5b524a;font-family:Georgia,serif;font-size:14px;text-anchor:middle}
+    .tag{font-family:Georgia,serif;font-size:15px;font-weight:bold;text-anchor:middle}
+  </style>
+  <rect class="bg" x="0" y="0" width="900" height="340" rx="16"/>
+
+  <!-- LEFT: adenosine binds -->
+  <g>
+    <rect class="panel" x="24" y="60" width="396" height="250" rx="12"/>
+    <text class="ttl" x="222" y="92">Без кофеина</text>
+    <!-- membrane with receptor notch -->
+    <path class="memb" d="M60,210 h150 v-18 a30,30 0 0 1 60,0 v18 h114 v40 h-324 z"/>
+    <path class="ink" d="M60,210 h150 v-18 a30,30 0 0 1 60,0 v18 h114" fill="none"/>
+    <!-- adenosine sitting in notch -->
+    <circle class="acc" cx="240" cy="192" r="26"/>
+    <text class="tag" x="240" y="197" fill="#f6f4ee">А</text>
+    <text class="sub" x="222" y="286">аденозин садится в рецептор →</text>
+    <text class="sub" x="222" y="304">тормоз включён, копится сонливость</text>
+  </g>
+
+  <!-- RIGHT: caffeine blocks -->
+  <g>
+    <rect class="panel" x="480" y="60" width="396" height="250" rx="12"/>
+    <text class="ttl" x="678" y="92">С кофеином</text>
+    <path class="memb" d="M516,210 h150 v-18 a30,30 0 0 1 60,0 v18 h114 v40 h-324 z"/>
+    <path class="ink" d="M516,210 h150 v-18 a30,30 0 0 1 60,0 v18 h114" fill="none"/>
+    <!-- caffeine (hexagon) plugging the notch -->
+    <polygon class="ink" points="696,168 716,180 716,204 696,216 676,204 676,180" fill="#2a2622"/>
+    <text class="tag" x="696" y="199" fill="#f6f4ee">К</text>
+    <!-- adenosine bumped away -->
+    <circle class="accs" cx="600" cy="140" r="20" fill="none"/>
+    <text class="tag" x="600" y="145" fill="#b06a43">А</text>
+    <path class="accs" d="M626,150 q20,10 40,18" fill="none" stroke-dasharray="4 5"/>
+    <text class="sub" x="678" y="286">кофеин занимает рецептор, аденозин не сядет →</text>
+    <text class="sub" x="678" y="304">тормоз снят: бодрость, дофамин звучит громче</text>
+  </g>
+</svg>

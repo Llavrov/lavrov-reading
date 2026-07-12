@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" role="img" aria-label="Кофейный пояс Земли и Эквадор">
+  <style>
+    .bg{fill:#f6f4ee}
+    .belt{fill:#e7cdb0;opacity:0.55}
+    .line{stroke:#b9a58f;stroke-width:1.6;stroke-dasharray:6 6}
+    .eq{stroke:#c9b8a2;stroke-width:1.2;stroke-dasharray:2 6}
+    .ink{fill:#2a2622;font-family:Georgia,'Times New Roman',serif}
+    .muted{fill:#5b524a;font-family:Georgia,'Times New Roman',serif}
+    .sml{fill:#8a8175;font-family:Georgia,'Times New Roman',serif;font-size:14px}
+    .dot{fill:#7a6f63}
+    .pin{fill:#b06a43}
+  </style>
+  <rect class="bg" x="0" y="0" width="900" height="320" rx="16"/>
+
+  <!-- coffee belt band -->
+  <rect class="belt" x="0" y="120" width="900" height="110"/>
+  <line class="line" x1="0" y1="120" x2="900" y2="120"/>
+  <line class="line" x1="0" y1="230" x2="900" y2="230"/>
+  <line class="eq" x1="0" y1="175" x2="900" y2="175"/>
+
+  <text class="sml" x="16" y="112">Тропик Рака · 23° с.ш.</text>
+  <text class="sml" x="16" y="248">Тропик Козерога · 23° ю.ш.</text>
+  <text class="sml" x="820" y="170" text-anchor="end" opacity="0.8">экватор</text>
+
+  <text class="ink" x="450" y="46" font-size="22" text-anchor="middle">Кофейный пояс</text>
+  <text class="muted" x="450" y="72" font-size="15" text-anchor="middle">кофе растёт в тёплой полосе между тропиками</text>
+
+  <!-- producer dots -->
+  <g>
+    <circle class="dot" cx="250" cy="200" r="5"/><text class="sml" x="250" y="222" text-anchor="middle">Бразилия</text>
+    <circle class="dot" cx="360" cy="150" r="4"/><text class="sml" x="360" y="140" text-anchor="middle">Колумбия</text>
+    <circle class="dot" cx="560" cy="165" r="4"/><text class="sml" x="560" y="150" text-anchor="middle">Эфиопия</text>
+    <circle class="dot" cx="720" cy="158" r="4"/><text class="sml" x="720" y="146" text-anchor="middle">Вьетнам</text>
+  </g>
+
+  <!-- Ecuador pin -->
+  <g transform="translate(315,178)">
+    <path class="pin" d="M0,0 C-9,-14 -14,-20 -14,-28 a14,14 0 0 1 28,0 C14,-20 9,-14 0,0 z"/>
+    <circle cx="0" cy="-28" r="5" fill="#f6f4ee"/>
+    <text class="ink" x="0" y="24" font-size="17" text-anchor="middle">Эквадор</text>
+    <text class="sml" x="0" y="42" text-anchor="middle">арабика высокогорья Анд + робуста</text>
+  </g>
+</svg>

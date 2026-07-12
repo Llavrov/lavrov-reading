@@ -258,6 +258,32 @@ a {
   }
 }
 
+// ── Иллюстрации ────────────────────────────────────────────────
+.figure {
+  margin: 2.25rem 0;
+  &--wide {
+    @media (min-width: 900px) {
+      width: calc(100% + 8rem);
+      margin-left: -4rem;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+  }
+  &__cap {
+    margin-top: 0.6rem;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+    text-align: center;
+  }
+}
+
 // ── Источники под статьёй ──────────────────────────────────────
 .sources {
   margin-top: 3.5rem;
