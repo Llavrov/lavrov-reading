@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" aria-label="Три типа прокрастинации по Полу Грэму">
+  <style>
+    .bg{fill:#f6f4ee}
+    .card{fill:#efe9df;stroke:#ddd3c4;stroke-width:1.5}
+    .cardBest{fill:#f3e7da;stroke:#d8b48a;stroke-width:2}
+    .t{fill:#2a2622;font-family:Georgia,serif;font-size:19px;font-weight:bold;text-anchor:middle}
+    .s{fill:#5b524a;font-family:Georgia,serif;font-size:15px;text-anchor:middle}
+    .tag{fill:#b06a43;font-family:Georgia,serif;font-size:13px;font-weight:bold;text-anchor:middle;letter-spacing:0.04em}
+  </style>
+  <rect class="bg" x="0" y="0" width="900" height="300" rx="16"/>
+  <text class="t" x="450" y="46" font-size="21">Три способа прокрастинировать</text>
+
+  <g>
+    <rect class="card" x="40" y="80" width="250" height="170" rx="12"/>
+    <text class="t" x="165" y="120">Тип A</text>
+    <text class="s" x="165" y="152">делать</text>
+    <text class="s" x="165" y="174">ничего</text>
+    <text class="s" x="165" y="214" font-style="italic">пустая трата</text>
+  </g>
+
+  <g>
+    <rect class="card" x="325" y="80" width="250" height="170" rx="12"/>
+    <text class="t" x="450" y="120">Тип B</text>
+    <text class="s" x="450" y="152">делать менее</text>
+    <text class="s" x="450" y="174">важное</text>
+    <text class="s" x="450" y="214" font-style="italic">самообман</text>
+  </g>
+
+  <g>
+    <rect class="cardBest" x="610" y="80" width="250" height="170" rx="12"/>
+    <text class="tag" x="735" y="104">ХОРОШАЯ</text>
+    <text class="t" x="735" y="132">Тип C</text>
+    <text class="s" x="735" y="162">забить на мелочи</text>
+    <text class="s" x="735" y="184">ради большой работы</text>
+    <text class="s" x="735" y="222" font-style="italic">так делают лучшие</text>
+  </g>
+</svg>

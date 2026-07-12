@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" role="img" aria-label="Главная мысль в голове и то, что пытается её захватить">
+  <style>
+    .bg{fill:#f6f4ee}
+    .head{fill:#efe9df;stroke:#2a2622;stroke-width:2.4}
+    .slotTop{fill:#b06a43}
+    .slot{fill:none;stroke:#c3b6a3;stroke-width:1.8}
+    .tw{fill:#f6f4ee;font-family:Georgia,serif;font-size:14px;text-anchor:middle}
+    .t{fill:#2a2622;font-family:Georgia,serif;font-size:15px;text-anchor:middle}
+    .s{fill:#5b524a;font-family:Georgia,serif;font-size:15px}
+    .warn{fill:#8a4b2f;font-family:Georgia,serif;font-size:14px;font-style:italic;text-anchor:middle}
+    .arr{fill:none;stroke:#b06a43;stroke-width:2;stroke-dasharray:5 5}
+  </style>
+  <rect class="bg" x="0" y="0" width="900" height="340" rx="16"/>
+  <text class="t" x="450" y="42" font-size="20" font-weight="bold">Ум в фоне дрейфует к одной мысли</text>
+
+  <!-- head profile (simple) -->
+  <path class="head" d="M300,300 v-120 a120,120 0 0 1 240,-6 c0,60 -26,74 -26,104 v22 z"/>
+
+  <!-- thought slots inside head -->
+  <rect class="slotTop" x="340" y="150" width="150" height="34" rx="8"/>
+  <text class="tw" x="415" y="172">главная мысль</text>
+  <rect class="slot" x="350" y="196" width="130" height="26" rx="7"/>
+  <text class="t" x="415" y="214" font-size="13">вторая</text>
+  <rect class="slot" x="356" y="232" width="115" height="24" rx="7"/>
+  <text class="t" x="413" y="249" font-size="12">третья</text>
+
+  <!-- hijackers on the right -->
+  <g>
+    <rect x="620" y="120" width="150" height="40" rx="9" fill="#eadfd0" stroke="#d8b48a" stroke-width="1.6"/>
+    <text class="t" x="695" y="145">деньги</text>
+    <rect x="620" y="180" width="150" height="40" rx="9" fill="#eadfd0" stroke="#d8b48a" stroke-width="1.6"/>
+    <text class="t" x="695" y="205">обида, спор</text>
+    <path class="arr" d="M618,150 C560,150 520,160 495,166"/>
+    <path class="arr" d="M618,200 C570,195 520,180 495,172"/>
+  </g>
+  <text class="warn" x="694" y="250">рвутся занять верхний слот</text>
+  <text class="s" x="120" y="315" font-size="13">верхняя мысль решает, куда идёт твой прогресс</text>
+</svg>

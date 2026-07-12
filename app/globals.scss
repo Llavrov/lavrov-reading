@@ -45,6 +45,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden; // страховка: ничто не должно съедать боковые отступы
   background: var(--bg);
   color: var(--text);
   font-family: var(--serif);
@@ -337,6 +338,9 @@ a {
 
 // ── Мобилка ────────────────────────────────────────────────────
 @media (max-width: 480px) {
+  :root {
+    --pad: 8px; // небольшой боковой отступ на мобилке (запрос Лёвы)
+  }
   body {
     font-size: 1.125rem;
   }

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" role="img" aria-label="Петля великой работы: любопытство, любимое дело, труд, открытие">
+  <style>
+    .bg{fill:#f6f4ee}
+    .node{fill:#f3e7da;stroke:#d8b48a;stroke-width:2}
+    .t{fill:#2a2622;font-family:Georgia,serif;font-size:16px;text-anchor:middle}
+    .c{fill:#8a4b2f;font-family:Georgia,serif;font-size:17px;font-style:italic;text-anchor:middle}
+    .arr{fill:none;stroke:#b9a58f;stroke-width:2.2}
+  </style>
+  <rect class="bg" x="0" y="0" width="900" height="340" rx="16"/>
+
+  <!-- center -->
+  <text class="c" x="450" y="164">так рождается</text>
+  <text class="c" x="450" y="188">великое</text>
+
+  <!-- arcs (clockwise) -->
+  <g class="arr">
+    <path d="M545,110 A190,150 0 0 1 700,200"/><polyline points="694,188 702,202 686,202"/>
+    <path d="M700,235 A190,150 0 0 1 545,300"/><polyline points="556,296 542,302 550,288"/>
+    <path d="M355,300 A190,150 0 0 1 200,235"/><polyline points="206,247 198,233 214,233"/>
+    <path d="M200,200 A190,150 0 0 1 355,110"/><polyline points="344,114 358,108 350,122"/>
+  </g>
+
+  <!-- nodes -->
+  <g>
+    <ellipse class="node" cx="450" cy="86" rx="105" ry="40"/>
+    <text class="t" x="450" y="91">любопытство</text>
+  </g>
+  <g>
+    <ellipse class="node" cx="720" cy="205" rx="110" ry="40"/>
+    <text class="t" x="720" y="198">работа, которую</text>
+    <text class="t" x="720" y="218">любишь</text>
+  </g>
+  <g>
+    <ellipse class="node" cx="450" cy="300" rx="105" ry="40"/>
+    <text class="t" x="450" y="305">упорный труд</text>
+  </g>
+  <g>
+    <ellipse class="node" cx="180" cy="205" rx="105" ry="40"/>
+    <text class="t" x="180" y="210">открытие</text>
+  </g>
+</svg>
