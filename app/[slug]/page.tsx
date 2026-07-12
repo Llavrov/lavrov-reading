@@ -5,6 +5,7 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { getAllSlugs, getArticle, formatDate } from "@/lib/articles";
 import { mdxComponents } from "@/components/mdx";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { OwnerZone } from "@/components/OwnerZone";
 import { site } from "@/lib/site";
 
 type Params = { slug: string };
@@ -103,6 +104,8 @@ export default async function ArticlePage({
             </section>
           ) : null}
         </article>
+
+        <OwnerZone slug={slug} questions={a.questions} />
       </main>
 
       <script

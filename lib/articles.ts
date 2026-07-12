@@ -17,6 +17,7 @@ export type ArticleMeta = {
   date: string; // ISO YYYY-MM-DD
   tags: string[];
   sources: SourceLink[];
+  questions: string[];
   readingMinutes: number;
 };
 
@@ -39,6 +40,7 @@ function toMeta(slug: string, data: Record<string, unknown>, content: string): A
     date: String(data.date ?? ""),
     tags: Array.isArray(data.tags) ? (data.tags as string[]) : [],
     sources: Array.isArray(data.sources) ? (data.sources as SourceLink[]) : [],
+    questions: Array.isArray(data.questions) ? (data.questions as string[]) : [],
     readingMinutes: Math.max(1, Math.round(stats.minutes)),
   };
 }

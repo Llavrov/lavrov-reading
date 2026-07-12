@@ -53,7 +53,8 @@ export default function RootLayout({
           <div className="wrap">
             <p>
               {site.author}. Личная читальня: конспекты книг и статей своими
-              словами. · <Link href="/rss.xml">RSS</Link>
+              словами. · <Link href="/rss.xml">RSS</Link> ·{" "}
+              <Link href="/me">кабинет</Link>
             </p>
           </div>
         </footer>
