@@ -263,6 +263,14 @@ a {
     border-top: 1px solid var(--border);
     margin: 3rem 0;
   }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
   blockquote {
     margin: 1.5rem 0;
     padding: 0.2rem 0 0.2rem 1.2rem;
