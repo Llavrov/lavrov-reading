@@ -42,10 +42,13 @@ export default function RootLayout({
     <html lang={site.lang}>
       <body>
         <header className="site-header">
-          <div className="wrap">
+          <div className="wrap site-header__row">
             <Link href="/" className="site-header__brand">
               {site.name}
             </Link>
+            <nav className="site-header__nav">
+              <Link href="/manga">Манга</Link>
+            </nav>
           </div>
         </header>
         {children}

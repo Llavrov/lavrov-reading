@@ -12,6 +12,15 @@ export default function Home() {
         вырезками из первоисточников и ссылками. Читаю, разбираю, возвращаюсь.
       </p>
 
+      <Link href="/manga" className="project-card">
+        <span className="project-card__tag">проект</span>
+        <span className="project-card__title">Своя манга на Remanga →</span>
+        <span className="project-card__desc">
+          Мастерская: гайды по ремеслу вебтуна, разбор жанра, характеры,
+          ИИ-генерация.
+        </span>
+      </Link>
+
       {articles.length === 0 ? (
         <p>Скоро здесь появятся первые разборы.</p>
       ) : (
