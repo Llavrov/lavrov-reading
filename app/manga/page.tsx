@@ -32,6 +32,14 @@ export default function MangaProject() {
         нейросетью и довести вебтун до релиза.
       </p>
 
+      <Link href="/manga/read" className="read-cta">
+        <span className="read-cta__label">Читать мангу</span>
+        <span className="read-cta__sub">«Сырой слой» · Глава 1 — арт-пасс</span>
+        <span className="read-cta__arrow">→</span>
+      </Link>
+
+      <h2 className="project__section">Рабочие материалы</h2>
+
       <ul className="article-list">
         {guides.map((g, i) => (
           <li key={g.slug} className="article-list__item">
