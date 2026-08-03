@@ -1,0 +1,35 @@
+<svg viewBox="0 0 640 180" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="mf-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9aa7b8"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="28" fill="#9aa7b8" font-size="13">Рабочая последовательность</text>
+
+  <!-- Требования -->
+  <rect x="16" y="66" width="150" height="52" rx="10" fill="rgba(59,130,246,0.18)" stroke="#3b82f6" stroke-width="2"/>
+  <text x="91" y="98" fill="#e8eaed" font-size="15" text-anchor="middle">Требования</text>
+
+  <!-- validation 1 -->
+  <line x1="170" y1="92" x2="196" y2="92" stroke="#9aa7b8" stroke-width="2" marker-end="url(#mf-arrow)"/>
+  <circle cx="220" cy="92" r="16" fill="rgba(34,197,94,0.18)" stroke="#22c55e" stroke-width="2"/>
+  <text x="220" y="97" fill="#22c55e" font-size="15" text-anchor="middle">✓</text>
+  <line x1="244" y1="92" x2="270" y2="92" stroke="#9aa7b8" stroke-width="2" marker-end="url(#mf-arrow)"/>
+
+  <!-- Анализ -->
+  <rect x="274" y="66" width="120" height="52" rx="10" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="334" y="98" fill="#e8eaed" font-size="15" text-anchor="middle">Анализ</text>
+
+  <!-- validation 2 -->
+  <line x1="398" y1="92" x2="424" y2="92" stroke="#9aa7b8" stroke-width="2" marker-end="url(#mf-arrow)"/>
+  <circle cx="448" cy="92" r="16" fill="rgba(34,197,94,0.18)" stroke="#22c55e" stroke-width="2"/>
+  <text x="448" y="97" fill="#22c55e" font-size="15" text-anchor="middle">✓</text>
+  <line x1="472" y1="92" x2="498" y2="92" stroke="#9aa7b8" stroke-width="2" marker-end="url(#mf-arrow)"/>
+
+  <!-- Решения -->
+  <rect x="502" y="66" width="120" height="52" rx="10" fill="rgba(59,130,246,0.18)" stroke="#3b82f6" stroke-width="2"/>
+  <text x="562" y="98" fill="#e8eaed" font-size="15" text-anchor="middle">Решения</text>
+
+  <text x="320" y="156" fill="#9aa7b8" font-size="13" text-anchor="middle">после каждого этапа — сверка со стейкхолдерами</text>
+</svg>

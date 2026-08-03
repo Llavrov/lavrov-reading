@@ -1,0 +1,24 @@
+<svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <text x="20" y="28" fill="#9aa7b8" font-size="13">Типы поддоменов — что делать самому, что купить</text>
+
+  <!-- CORE -->
+  <rect x="24" y="52" width="592" height="56" rx="10" fill="rgba(59,130,246,0.18)" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="24" y="52" width="150" height="56" rx="10" fill="rgba(59,130,246,0.28)"/>
+  <text x="99" y="86" fill="#e8eaed" font-size="17" text-anchor="middle" font-weight="600">CORE</text>
+  <text x="196" y="78" fill="#e8eaed" font-size="14">конкурентное преимущество</text>
+  <text x="196" y="98" fill="#9aa7b8" font-size="13">делать самому</text>
+
+  <!-- SUPPORTING -->
+  <rect x="24" y="120" width="592" height="56" rx="10" fill="rgba(34,197,94,0.18)" stroke="#22c55e" stroke-width="2"/>
+  <rect x="24" y="120" width="150" height="56" rx="10" fill="rgba(34,197,94,0.28)"/>
+  <text x="99" y="154" fill="#e8eaed" font-size="16" text-anchor="middle" font-weight="600">SUPPORTING</text>
+  <text x="196" y="146" fill="#e8eaed" font-size="14">просто, редко меняется</text>
+  <text x="196" y="166" fill="#9aa7b8" font-size="13">сами или аутсорс</text>
+
+  <!-- GENERIC -->
+  <rect x="24" y="188" width="592" height="56" rx="10" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="24" y="188" width="150" height="56" rx="10" fill="rgba(245,158,11,0.28)"/>
+  <text x="99" y="222" fill="#e8eaed" font-size="17" text-anchor="middle" font-weight="600">GENERIC</text>
+  <text x="196" y="214" fill="#e8eaed" font-size="14">нужно всем</text>
+  <text x="196" y="234" fill="#9aa7b8" font-size="13">купить / no-code</text>
+</svg>
