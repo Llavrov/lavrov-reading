@@ -12,14 +12,20 @@ export default function Home() {
         вырезками из первоисточников и ссылками. Читаю, разбираю, возвращаюсь.
       </p>
 
-      <Link href="/manga" className="project-card">
-        <span className="project-card__tag">проект</span>
-        <span className="project-card__title">Своя манга на Remanga →</span>
-        <span className="project-card__desc">
-          Мастерская: гайды по ремеслу вебтуна, разбор жанра, характеры,
-          ИИ-генерация.
-        </span>
-      </Link>
+      <div className="home-actions">
+        <Link href="/course" className="home-actions__btn">
+          <span className="home-actions__label">Курс →</span>
+          <span className="home-actions__desc">
+            Анализ систем: как думать до кода. С прогрессом.
+          </span>
+        </Link>
+        <Link href="/manga" className="home-actions__btn">
+          <span className="home-actions__label">Манга →</span>
+          <span className="home-actions__desc">
+            Своя манга на Remanga: гайды, характеры, ИИ-генерация.
+          </span>
+        </Link>
+      </div>
 
       {articles.length === 0 ? (
         <p>Скоро здесь появятся первые разборы.</p>

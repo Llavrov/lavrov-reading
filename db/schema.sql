@@ -8,6 +8,8 @@ create table if not exists reads (
   scroll_pct int         not null default 0
 );
 create index if not exists reads_slug_idx on reads (slug);
+-- Время на странице (секунды) для курса. Идемпотентно.
+alter table reads add column if not exists seconds int not null default 0;
 
 create table if not exists feedback (
   id         bigint generated always as identity primary key,

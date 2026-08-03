@@ -10,15 +10,18 @@ import { useEffect, useRef } from "react";
 export function ReadTracker({ slug }: { slug: string }) {
   const sent = useRef(false);
   const maxPct = useRef(0);
+  const start = useRef(Date.now());
 
   useEffect(() => {
+    start.current = Date.now();
     function send() {
       if (sent.current) return;
       sent.current = true;
+      const seconds = Math.round((Date.now() - start.current) / 1000);
       fetch("/api/track", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug, scroll_pct: maxPct.current }),
+        body: JSON.stringify({ slug, scroll_pct: maxPct.current, seconds }),
         keepalive: true,
       }).catch(() => {});
     }

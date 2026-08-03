@@ -130,6 +130,42 @@ a {
   }
 }
 
+// ── Две кнопки на главной (Курс / Манга) ───────────────────────
+.home-actions {
+  display: flex;
+  gap: 0.9rem;
+  margin: 0 0 2.5rem;
+  @media (max-width: 560px) {
+    flex-direction: column;
+  }
+  &__btn {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-soft);
+    text-decoration: none;
+    transition: border-color 0.15s ease;
+    &:hover {
+      border-color: var(--link);
+    }
+  }
+  &__label {
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  &__desc {
+    margin-top: 0.3rem;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+}
+
 // ── Карточка проекта на главной ────────────────────────────────
 .project-card {
   display: block;
@@ -203,6 +239,172 @@ a {
     font-family: var(--sans);
     font-size: 0.8rem;
     color: var(--text-muted);
+  }
+}
+
+// ── Курс: шапка, прогресс, список уроков ───────────────────────
+.course {
+  padding: 1.5rem 0 4rem;
+  &__head {
+    margin: 1.2rem 0 1.5rem;
+  }
+  &__title {
+    font-size: 1.9rem;
+    margin: 0 0 0.5rem;
+  }
+  &__lead {
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    margin: 0;
+  }
+}
+
+.course-progress {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-soft);
+  padding: 1.1rem 1.25rem;
+  margin: 0 0 2rem;
+  &__row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  &__big {
+    font-family: var(--sans);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  &__cap {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  &__bar {
+    height: 8px;
+    border-radius: 6px;
+    background: var(--border);
+    overflow: hidden;
+    margin: 0.7rem 0;
+  }
+  &__fill {
+    height: 100%;
+    background: var(--link);
+    border-radius: 6px;
+    transition: width 0.3s ease;
+  }
+  &__meta {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+  }
+  &__note {
+    margin: 0.6rem 0 0;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+}
+
+.lesson-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: none;
+  &__item {
+    border-top: 1px solid var(--border);
+    &:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+    &--done .lesson-list__icon {
+      color: var(--link);
+    }
+    &--started .lesson-list__icon {
+      color: var(--text);
+    }
+    &--new .lesson-list__icon {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+  }
+  &__link {
+    display: flex;
+    gap: 0.9rem;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    color: inherit;
+    &:hover .lesson-list__title {
+      color: var(--link);
+    }
+  }
+  &__icon {
+    flex: 0 0 auto;
+    margin-top: 0.15rem;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  &__top {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  &__title {
+    font-size: 1.2rem;
+    line-height: 1.25;
+    transition: color 0.15s ease;
+  }
+  &__desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  &__meta {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 0.15rem;
+  }
+}
+
+.lesson__badge {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+  &__link {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    &:hover {
+      color: var(--link);
+    }
   }
 }
 
